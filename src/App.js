@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Music from "./components/Music";
 import Games from "./components/Games";
 import Blog from "./components/Blog";
+import BlogPost from "./components/BlogPost";
 
 class App extends Component {
   render() {
@@ -14,7 +15,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/music" component={Music} />
           <Route path="/games" component={Games} />
-          <Route path="/blog" component={Blog} />
+          <Route exact path="/blog/" component={Blog} />
+          <Route path="/blog/:year/:month/:article" component={BlogPost} />
         </Container>
       </Router>
     );
